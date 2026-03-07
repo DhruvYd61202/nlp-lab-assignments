@@ -1,0 +1,7 @@
+name: nlp_lab
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+prefix: C:\Users\dhruv\anaconda3\envs\nlp_lab
