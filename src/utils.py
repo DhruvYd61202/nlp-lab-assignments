@@ -44,3 +44,12 @@ def prepare_corpus(urls, window_size=2):
         cbow_data.append((context, target))
         
     return cbow_data, word_to_ix, ix_to_word, V
+
+
+def make_cbow_data(tokens, window=2):
+    data = []
+    for i in range(window, len(tokens) - window):
+        context = tokens[i-window:i] + tokens[i+1:i+window+1]
+        target = tokens[i]
+        data.append((context, target))
+    return data
